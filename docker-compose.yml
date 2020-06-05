@@ -1,0 +1,47 @@
+version: '3.1'
+
+services:
+
+    db:
+        image: postgres
+        restart: always
+        ports:
+            - 5432:5432
+        networks: 
+            - backend
+        environment:
+            POSTGRES_DB: assistencia-social
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
+        networks: 
+            - backend
+        depends_on:
+            - db
+
+    node:
+        image: node:latest
+        restart: always
+        user: "node"
+        working_dir: /home/node/app
+        environment: 
+            NODE_ENV: "production"
+        volumes:
+            - ./:/home/node/app
+            - ./:/docker-entrypoint-initback.d
+        networks: 
+            - backend
+        ports:
+            - 3000:3000
+        command: "npm start"
+        depends_on: 
+            - db
+
+networks:
+    backend:
+        driver: bridge
