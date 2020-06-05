@@ -11,6 +11,10 @@ const OcorrenciaController = require('./controllers/OcorrenciaController');
 const SecretariaController = require('./controllers/SecretariaController');
 const EnderecoPessoaController = require('./controllers/EnderecoPessoaController');
 
+router.get('/', function(req, res) {
+    res.render('index');
+});
+
 router.get('/endereco', EnderecoController.list);
 
 router.get('/endereco/:enderecoId', celebrate({
