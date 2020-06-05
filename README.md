@@ -53,6 +53,11 @@ DB_NAME=assistencia-social # Nome do banco (não precisa estar criado)
 npm db:config
 ```
 
+- Rode o comando ```npm```, que vai instalar as dependências da aplicação.
+``` bash
+npm install
+```
+
 - Agora, é só rodar o comando ```npm```, que vai iniciar o servidor back-end em modo de desenvolvimento.
 ``` bash
 npm start:dev
