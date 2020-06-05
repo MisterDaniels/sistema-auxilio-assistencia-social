@@ -50,7 +50,7 @@ DB_NAME=assistencia-social # Nome do banco (não precisa estar criado)
 
 - Agora, rode o comando ```npm```, que vai subir o banco com os dados do ```.env``` configurado acima e subir as ```migrations``` com os dados do banco.
 ``` bash 
-npm db:config
+npm run db:config
 ```
 
 - Rode o comando ```npm```, que vai instalar as dependências da aplicação.
@@ -60,7 +60,7 @@ npm install
 
 - Agora, é só rodar o comando ```npm```, que vai iniciar o servidor back-end em modo de desenvolvimento.
 ``` bash
-npm start:dev
+npm run start:dev
 ```
 
 - Agora é só meter ficha :grin:
