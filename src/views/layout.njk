@@ -1,1 +1,64 @@
-Só mexer
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        {% block head %}
+            <title>Sistema de Auxílio para Assistência Social</title>
+        {% endblock %}
+
+        <link 
+            rel="stylesheet"
+            href="/styles/global.css" />
+        <link 
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />    
+        <link 
+            rel="stylesheet" 
+            href="https://rawgit.com/trentrichardson/jQuery-Timepicker-Addon/master/dist/jquery-ui-timepicker-addon.min.css" />
+        <link
+            rel="stylesheet"
+            href="/styles/font-awesome.min.css" />
+        <link 
+            rel="stylesheet"
+            href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+        <link 
+            rel="stylesheet" 
+            href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+        <script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous">
+        </script>
+        <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js">
+        </script>
+        <script 
+            src="https://code.jquery.com/ui/1.12.0/jquery-ui.js">
+        </script>
+        <script 
+            src="https://rawgit.com/trentrichardson/jQuery-Timepicker-Addon/master/dist/jquery-ui-timepicker-addon.min.js">
+        </script>
+        <script 
+            src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        </script>
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="links">
+                <a href="/" class="active">Entrar</a>
+                <a href="/cadastro">Cadastro</a>
+                <a href="/palestras">Palestras</a>
+                <a href="/certificado" class="deactivate">Certificado</a>
+            </div>
+        </header>
+
+        {% block content %}{% endblock %}
+
+    </body>
+
+</html>
