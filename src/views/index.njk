@@ -3,7 +3,9 @@
 {% block content %}
 
     <script>
-        const dataTable = new MDCDataTable(document.querySelector('.mdc-data-table'));
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dataTable = mdc.dataTable.MDCDataTable.attachTo(document.querySelector('.mdc-data-table'));
+        });
     </script>
 
     <div class="mdc-layout-grid">
